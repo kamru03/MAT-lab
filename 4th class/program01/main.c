@@ -19,11 +19,27 @@ float lagrangeInterpolation(float x[], float y[], int n, float value) {
 }
 
 int main() {
-    float x[] = {1, 3, 4, 7, 8};
-    float y[] = {1.25, 3.46, 5.96, 2.48, 7.89};
-    int n = 5;
+    int n;
 
-    float value = 5.96;
+    printf("Enter number of data points: ");
+    scanf("%d", &n);
+
+    float x[n], y[n];
+
+    printf("Enter values of x:\n");
+    for (int i = 0; i < n; i++) {
+        scanf("%f", &x[i]);
+    }
+
+    printf("Enter values of y:\n");
+    for (int i = 0; i < n; i++) {
+        scanf("%f", &y[i]);
+    }
+
+    float value;
+
+    printf("Enter the value of x for interpolation: ");
+    scanf("%f", &value);
 
     float ans = lagrangeInterpolation(x, y, n, value);
 
